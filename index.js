@@ -11,11 +11,20 @@ function getRecipes() {
 
 function getShoppingList(recipe_id) {
 	return db
-		.select('quantities.quantity', 'ingredients.name')
+		.select('quantity', 'ingredients.name')
 		.from('steps')
 		.innerJoin('quantities', 'quantities.id', 'steps.quantity_id')
 		.innerJoin('ingredients', 'ingredients.id', 'steps.ingredient_id')
 		.where('steps.recipe_id', recipe_id);
+}
+
+function getInstructions(recipe_id) {
+	return db
+	.select('step_order', 'quantity', 'ingredients.name')
+	.from('steps')
+	.innerJoin('quantities', 'quantities.id', 'steps.quantity_id')
+	.innerJoin('ingredients', 'ingredients.id', 'steps.ingredient_id')
+	.where('steps.recipe_id', recipe_id);
 }
 
 app.listen(4000, () => {
