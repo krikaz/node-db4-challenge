@@ -8,9 +8,9 @@ exports.seed = function(knex) {
 				{ name: 'cL of milk' },
 				{ name: 'eggs' },
 				{ name: 'yoghurt nature' },
-				{ name: 'ham' },
-				{ name: 'cheese' },
-				{ name: 'mushrooms' },
+				{ name: 'g of ham' },
+				{ name: 'g of cheese' },
+				{ name: 'g of mushrooms' },
 			]);
 		});
 };
