@@ -3,9 +3,9 @@ exports.seed = function(knex) {
 		.truncate()
 		.then(function() {
 			return knex('recipes').insert([
-				{ name: 'chocolate cake' },
-				{ name: 'yoghurt cake' },
-				{ name: 'pizza' },
+				{ name: 'crazy cake' },
+				{ name: 'fancy dish' },
+				{ name: 'funny pizza' },
 			]);
 		});
 };
